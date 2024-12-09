@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hello_mart/start_selling/slider_button.dart';
 import 'package:hello_mart/start_selling/wave_painter.dart';
 
+import '../user_manual/user_manual_screen.dart';
+
 class StartSellingScreen extends StatefulWidget {
   const StartSellingScreen({super.key});
 
@@ -31,6 +33,7 @@ class _StartSellingScreenState extends State<StartSellingScreen> {
                     ),
                     painter: WavePainter(),
                   ),
+
                   Positioned(
                     top: size.height*0.4,
                     left: 0,
@@ -45,13 +48,14 @@ class _StartSellingScreenState extends State<StartSellingScreen> {
             ),
           ),
           Expanded(flex: 2, child: Column(children: [
-            Expanded(flex: 2, child: Center(child: Text("Reach and Connect with buyers who value\nsustainability and unique finds.",textAlign: TextAlign.center,))),
-            Expanded(flex: 1, child: SizedBox(width: size.width, child: Padding(
+            Expanded(flex: 3, child: Center(child: Text("Reach and Connect with buyers who value\nsustainability and unique finds.",textAlign: TextAlign.center,))),
+            Expanded(flex: 2, child: SizedBox(width: size.width, child: Padding(
               padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
               child: Center(
                 child: SliderButton(
                   text: 'Slide to Start',
                   onSlided: () {
+                    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (_) => PageViewExample()), (Route<dynamic> route) => false);
                     // Handle the action when the button is slided
                     print('Slider Button Slided!');
                   },
