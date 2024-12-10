@@ -153,18 +153,18 @@ class _PageViewExampleState extends State<PageViewExample> {
         padding: const EdgeInsets.all(16.0),
         child: _currentPage < pages.length - 1
             ? Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.blue,
                 borderRadius: BorderRadius.all(Radius.circular(16))),
                 width: double.infinity,
                 child: MaterialButton(
                     onPressed: () {
                       _pageController.nextPage(
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.easeInOut,
                       );
                     },
-                    child: Text("Next", style: TextStyle(color: Colors.white),)))
+                    child: const Text("Next", style: TextStyle(color: Colors.white),)))
             : SliderButton(onSlided: () {}, text: "Slide to Start Now",)
         //   Container(
         //     width: double.infinity,

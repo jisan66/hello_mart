@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_mart/home_page/home_screen.dart';
 import 'package:hello_mart/start_selling/start_selling_screen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StartSellingScreen(),
+      home: const HomeScreen(),
     );
   }
 }
