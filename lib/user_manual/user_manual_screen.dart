@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hello_mart/start_selling/slider_button.dart';
 import 'package:hello_mart/user_manual/cutom_wave_painter.dart';
 
+import '../bottom_nav.dart';
 import '../start_selling/wave_painter.dart';
 
-void main() {
-  runApp(MaterialApp(home: PageViewExample()));
-}
 
 class PageViewExample extends StatefulWidget {
   @override
@@ -165,7 +163,9 @@ class _PageViewExampleState extends State<PageViewExample> {
                       );
                     },
                     child: const Text("Next", style: TextStyle(color: Colors.white),)))
-            : SliderButton(onSlided: () {}, text: "Slide to Start Now",)
+            : SliderButton(onSlided: () {
+              Navigator.push(context, MaterialPageRoute(builder: (_)=> BottomNavScreen()));
+        }, text: "Slide to Start Now",)
         //   Container(
         //     width: double.infinity,
         //     child: ElevatedButton(

@@ -22,20 +22,21 @@ class CustomPromoCard extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    const Flexible(flex: 3,child: Text("Now Available! HELLO MART X Hello Kitty", style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),)),
-                    SizedBox(height: 12,),
+                    const Flexible(flex: 3,child: Text("Now Available! HELLO MART X Hello Kitty", style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),)),
+                    SizedBox(height: 8,),
                     Flexible(
                         flex: 2,
                         child: Text(
-                            "20% off exclusively on Thrif. Use Code HELLOMART" ,style: TextStyle(fontSize: 14,color: Colors.grey.shade600))),
+                            "20% off exclusively on Thrif. Use Code HELLOMART" ,style: TextStyle(fontSize: 12,color: Colors.grey.shade600))),
                     const SizedBox(
                       height: 12,
                     ),
                     Flexible(
-                        flex: 3,
+                        flex: 2,
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: MaterialButton(
+                            height: 40,
                               minWidth: 10,
                               onPressed: () {},
                               color: Colors.black,

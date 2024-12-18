@@ -9,7 +9,7 @@ class CustomVideoShortsCard extends StatelessWidget {
       onTap: (){},
       child: Container(
         height: 250,
-        width: 180,
+        width: 120,
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(16))
         ),
